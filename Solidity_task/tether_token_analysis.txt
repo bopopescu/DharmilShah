@@ -1,0 +1,30 @@
+changes to tether token
+
+constructor () ownable
+emit in transfe function  
+emit in transfer from ()
+emit in function unpause and pause  
+emit in function addblacklist 
+emit in function remove blacklist
+emit in function destroy black funds
+constructor in tether token
+emit in deprecate function
+emit in issue function
+emit in redeem function
+emit in set params
+
+
+
+
+
+In the tether token the transfer is generated using this uint fee = (_value.mul(basisPointsRate)).div(10000);
+
+Methods dont work while calling the pause method are :- approve, allowance, set param , total supply , add black list , get blacklist status, is blacklist , 
+remove blacklist , issue, redeem, transfer ownership, get ownership, deprecate, upgraded address .
+
+Methods dont work while paused method calls are :- transfer, transfer from, 
+
+deprecate method will disable the functionality of the standard token (standard token which is inherited or which will going to inherit) 
+
+
+
