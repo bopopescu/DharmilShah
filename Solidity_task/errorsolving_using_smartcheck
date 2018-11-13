@@ -1,0 +1,76 @@
+pragma solidity ^0.4.25;
+
+// import "browser/erc20testing.sol";
+// interface erc20 {
+    
+//     function totalSupply() external view returns (uint _totalsupply); 
+//     function balanceOf(address owner)external view returns (uint balance);
+//     function transfer(address _to, uint _value)external  returns (bool success);
+//     function allowance(address _owner, address _spender) external view returns (uint remaining);
+//     function transferFrom(address _from, address _to, uint _value) external view returns (bool success);
+//     function approve(address _spender, uint _value) external view returns (bool success);
+//     event Approval(address indexed _owner, address indexed _spender, uint _value);
+//      event Transfer(address indexed _from, address indexed _to, uint _value);
+// }
+
+contract myfirsttoken {
+   
+    string public constant symbol = "MFT";
+    string public constant name = "My First Token";
+    uint public constant decimals  = 18;
+    
+    uint public constant __totalsupply = 1000000000000000000; 
+    mapping (address => uint) public __balanceof;    
+    mapping (address => mapping (address => uint256)) public allowed;
+    
+    event Approval(address indexed _owner, address indexed _spender, uint _value);
+    event Transfer(address indexed _from, address indexed _to, uint _value);
+    
+    constructor() public {
+        __balanceof[msg.sender] = __totalsupply; 
+    }
+    
+    function totalSupply() public pure returns (uint _totalsupply){
+        _totalsupply = __totalsupply;
+        return _totalsupply;
+    }
+    
+    function balanceOf(address _owner)public view returns (uint balance){
+        return __balanceof[_owner];
+    }
+    
+    function transfer(address _to, uint _value)external returns(bool success){
+        require(_value > 0 && _value <= balanceOf(msg.sender));
+         __balanceof[msg.sender] -= _value;
+         __balanceof[_to] += _value;
+         return true;
+    }
+    
+     function approve(address _spender, uint _value) public returns (bool)
+    {
+        allowed[msg.sender][_spender] = _value;
+        emit Approval(msg.sender,_spender,_value);
+        return true;
+    }
+    
+    function transferFrom(address _from, address _to, uint _value) public returns (bool success){
+        require (allowed[_from][msg.sender] > 0 
+            && _value > 0 
+            && allowed[_from][msg.sender] >= _value &&
+            __balanceof[_from] >= _value );
+            
+                __balanceof[_from] -= _value;
+                __balanceof[_to] += _value;
+                allowed[_from][msg.sender] -= _value;
+                return true;
+                }
+    function allowance(address _owner, address _spender) public view returns (uint remaining)
+    {
+        return allowed[_owner][_spender];
+        
+    }
+   
+}
+
+
+// errors contains private varible visibility, compiler version, approve function issue
