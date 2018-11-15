@@ -1,0 +1,23 @@
+BNB Token Analysis
+
+It uses a custom matching engine to match buyers and sellers at the requested prices. Once the trade is processed, each customer receives 
+what they want, and Binance receives a small fee for providing the matching and exchange service. This is how an exchange makes a profit.
+BNB supports multiple utilities on the Binance ecosystem, which includes paying for trading fees, exchange fees, listing fees, and any other 
+fees on the Binance exchange.One of the key parts of the BNB token is the plans for buying back the tokens and burning them
+
+
+Binance Coin Burn :-
+
+If your discount keeps decreasing won’t that make the token worthless eventually. Well, that will be helped as more and more people come to the 
+exchange, but the founders at Binance also found another solution to keep the value of the token from dropping. Every quarter they take 20% of 
+their profits from fees and use it to buy coins and “burn” them, or destroy them.
+
+
+Fallback, withdraw, burn, freeze and unfreeze are main functionality of the BNB token.
+
+
+
+
+
+
+
