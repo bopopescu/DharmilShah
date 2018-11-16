@@ -1,0 +1,13 @@
+Robsten network using Meta Mask
+
+add meta mask extension in chrome
+create account 
+store seed phrase sentence . so as to retrive your account 
+select robsten network
+in Remix change environment to injected web3
+deploy
+wait for the pop-up confirmation. click on that or we can open that by opening the meta mask and scroll down to select recently used contract 
+after selecting that , you will redirected to the page which display success for your contractt
+then select contract to link 
+after clicking that you will see your contract address 
+then verify your code by going to code tab
