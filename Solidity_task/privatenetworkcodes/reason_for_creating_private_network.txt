@@ -1,0 +1,21 @@
+How to create private network on the ethereum network ? 
+
+drawbacks on the main network :-
+
+From an experimental, testing perspective there are two main drawbacks to using the main Ethereum network. 
+Firstly, of course starting Ethereum with the default network settings will result in your peer (full) node downloading the entire Ethereum blockchain. 
+This takes a significant amount of time and requires a lot of storage on your local disk. 
+Secondly any activity on the main Ethereum network requires “gas”. Whilst this gas is obtainable, it involves purchasing and depositing actual ETH into 
+your account. You may not want to do this just for rapid experimentation and testing
+
+
+Private Network :-
+
+A private network requires negligible local disk storage and can be operated without having to purchase ETH with real money. An Ethereum network is a 
+private network if the nodes are not connected to the main network nodes. In this context private only means reserved or isolated, rather than protected or secure.
+
+An Ethereum network is a private network if the nodes are not connected to the main network nodes. In this context private only means reserved or isolated, 
+rather than protected or secure. 
+
+
+

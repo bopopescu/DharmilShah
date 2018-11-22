@@ -1,0 +1,33 @@
+geth attach not working then use this : geth attach ipc:\\.\pipe\geth.ipc
+
+
+eth.accounts = displayed the account which we created
+
+eth.coinbase = displayed acccount which are used for rewards
+
+eth.getBalance(eth.coinbase) = displayed the acccount with balance 
+
+eth.getBalance(eth.accounts[1]) = displayed the acccount with balance
+
+eth.getBalance.. will return the value in form of wei so to convert into ether used this
+
+web3.fromWei(eth.getBalance(eth.coinbase),"ether")
+
+miner.stop =  used to stop the mining process and check on the other terminal where startnode is execution to see that whether that is stop or not
+
+miner.start(1) = displayed that mining is start processing with line displaying updated mining thread = "1"
+
+net.version = display network id
+
+personal.unlockAccount(eth.accounts[1],"pass1234", 300) = used to open particular account with password pass1234 for specified amount of duration which is 300 seconds = 5 min
+
+personal.unlockAccount(eth.accounts[1]) = same but in this the terminal will asked to enter the password which is pass1234 and default durations is 10 min
+
+eth.sendTransaction({from: eth.coinbase, to: eth.accounts[1], value: web3.toWei(10, "ether")}) =  used to transfer the ether 
+
+
+for more command refer below site :
+
+https://github.com/ethereum/go-ethereum/wiki/Javascript-Console
+
+
