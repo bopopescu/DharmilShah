@@ -1,0 +1,143 @@
+txpool.status
+
+
+ETH COMMANDS
+
+eth.getWork() = The first parameter is the hash of the block header, not the entire block. The header includes the root of the transaction trie, but the trie itself is stored 
+in the main part of the block, outside of the header. More formally, the first parameter is the hash of the truncated block header, which includes neither the nonce or 
+mix-hash components that a complete block header normally has.
+
+eth.hashrate = returns number of hashes per second
+
+eth.blockNumber
+
+eth.call()
+
+gas price
+
+eth.compile
+
+eth.mining
+
+eth.namereg
+
+eth.contract
+
+eth.pendingtransactions
+
+eth.defaultaccount
+
+eth.getProtocolversion
+
+eth.defaultBlock
+
+eth.resets
+
+eth.estimateGas
+
+eth.filter
+
+eth.getSyncing
+
+eth.sendTransaction
+
+eth.getTransaction
+
+eth.balance
+
+eth.getTransactioncount
+
+eth.blockNumber
+
+eth.gettransactionfromblock
+
+eth.getTransactionReceipt
+
+eth.getblocktransactioncount
+
+eth.getuncle
+
+eth.syncing
+
+
+PERSONAL COMMANDS
+
+personal.listAccounts
+
+web3.personal.newAccount('password')
+
+web3.personal.lockAccount('address')
+
+web3.personal.unlockAccount('address','password','duration ') 	// duration is optional
+
+var tx = {from: "0x391694e7e0b0cce554cb130d723a9d27458f9298", to: "0xafa3f8684e54059998bc3a7b0d2b0da075154d66", value: web3.toWei(1.23, "ether")}
+undefined
+personal.sendTransaction(tx, "passphrase")
+
+personal.sign("0x6e6179616e","0x411d1423c275dfd0064fab54315e1cded8ef689c","pass1234") // 1st arg is hexvalue which is done through converting string to hex, 2 is address, 3 is password
+
+personal.ecRecover("0x6e6179616e","0xfc1e131d68e644916b4a728a3aeee340f663558db7b817f38e5880ca241d77a95641882e76c170d6c
+09f633720e718349355e3bbaeccec1dbce1573a92a17b641b") // 1st is hex string which was used for personal.sign and 2nd is the private key calculated from persona.sign result
+
+personal.listWallets
+
+personal.importRawKey
+
+
+ADMIN COMMANDS
+
+admin.nodeInfo 
+
+admin.addPeer(nodeurl)
+
+admin.peers
+
+admin.sleep(s)
+
+admin.sleepBlocks(n)
+
+admin.datadir
+
+admin.startRPC(host,portnumber,corsheader,modules) //Starts the HTTP server for the JSON-RPC.
+
+admin.stopRPc() //Stops the HTTP server
+
+admin.startWS("127.0.0.1", 8546, "*", "web3,net,eth") //Starts the websocket server for the JSON-RPC.
+
+admin.stopWS() //Stops the websocket server
+
+MINER COMMANDS
+
+miner.setGasPrice
+
+miner.start()
+
+miner.stop()
+
+miner.setExtra("extra data") // passs extra string for the block . limit is upto 32 bytes.
+
+miner.setEtherbase(account)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
