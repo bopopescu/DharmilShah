@@ -1,0 +1,28 @@
+Networkid will always be the 3 because it represents the testnet/ropsten network
+
+
+geth --identity "testnet" --nodiscover --networkid 3 --datadir E:\dharmil\Task\Solidity_task\privatenetworkcodes\Testnet_examples  init E:\dharmil\Task\Solidity_task\privatenetworkcodes\Testnet_examples/CustomGenesis.json
+
+geth account new --datadir E:\dharmil\Task\Solidity_task\privatenetworkcodes\Testnet_examples
+
+geth --identity "testnet" --datadir E:\dharmil\Task\Solidity_task\privatenetworkcodes\Testnet_examples --nodiscover --networkid 3 --port 30304 --ipcdisable console
+
+
+
+geth --identity "testnet" --nodiscover --networkid 3 --datadir E:\dharmil\Task\Solidity_task\privatenetworkcodes\Testnet_examples  init E:\dharmil\Task\Solidity_task\privatenetworkcodes\Testnet_examples/CustomGenesis.json console
+
+geth account list
+
+geth --identity "MyTestNetNode" --datadir E:\dharmil\Task\Solidity_task\privatenetworkcodes\Testnet_examples --nodiscover --networkid 3 --port 30304 --ipcdisable console
+
+eth.accounts
+
+personal.newAccount()
+
+web3.personal
+
+
+
+
+
+
