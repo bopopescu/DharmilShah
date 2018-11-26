@@ -1,0 +1,7 @@
+geth --rinkeby
+
+eth --identity "MyTestNetworkNode" --datadir C:\Users\JBSPL-0081\AppData\Roaming\Ethereum\rinkeby --rinkeby --nodiscover --networkid 1234 console
+
+geth --identity "rinkeby" --nodiscover --networkid 4 --datadir C:\Users\JBSPL-0081\AppData\Roaming\Ethereum\rinkeby  init C:\Users\JBSPL-0081\AppData\Roaming\Ethereum\rinkeby/CustomGenesis.json
+
+geth --identity "rinkeby" --datadir C:\Users\JBSPL-0081\AppData\Roaming\Ethereum\rinkeby --nodiscover --networkid 4 console
