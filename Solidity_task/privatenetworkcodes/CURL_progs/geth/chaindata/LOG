@@ -1,0 +1,34 @@
+=============== Nov 28, 2018 (IST) ===============
+11:29:25.435529 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+11:29:25.791841 db@open opening
+11:29:25.794826 version@stat F·[] S·0B[] Sc·[]
+11:29:25.839051 db@janitor F·2 G·0
+11:29:25.839051 db@open done T·47.2103ms
+=============== Nov 28, 2018 (IST) ===============
+11:32:52.987831 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+11:32:52.988789 version@stat F·[] S·0B[] Sc·[]
+11:32:52.988789 db@open opening
+11:32:52.988789 journal@recovery F·1
+11:32:52.991781 journal@recovery recovering @1
+11:32:53.030706 memdb@flush created L0@2 N·619 S·50KiB "\x02d\xfc..\x19Ba,v428":"\xfe\x88\xcf..H\xef\xcc,v361"
+11:32:53.034695 version@stat F·[1] S·50KiB[50KiB] Sc·[0.25]
+11:32:53.134129 db@janitor F·3 G·0
+11:32:53.134129 db@open done T·145.3401ms
+18:58:38.250626 db@close closing
+18:58:38.340384 db@close done T·89.7585ms
+=============== Nov 29, 2018 (IST) ===============
+10:16:53.386600 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+10:16:53.415439 version@stat F·[1] S·50KiB[50KiB] Sc·[0.25]
+10:16:53.415439 db@open opening
+10:16:53.416486 journal@recovery F·1
+10:16:53.450397 journal@recovery recovering @3
+10:16:53.660342 memdb@flush created L0@5 N·19146 S·981KiB "6?\x93..\xadAq,v19761":"\xfe\x94\xcd..\"|\x88,v19766"
+10:16:53.664008 version@stat F·[2] S·1MiB[1MiB] Sc·[0.50]
+10:16:53.798788 db@janitor F·4 G·0
+10:16:53.798788 db@open done T·382.3022ms
+10:25:26.206666 table@compaction L0·2 -> L1·0 S·1MiB Q·19903
+10:25:26.278052 table@build created L1@8 N·13387 S·772KiB "\x02d\xfc..\x19Ba,v428":"\xfe\x94\xcd..\"|\x88,v19766"
+10:25:26.278052 version@stat F·[0 1] S·772KiB[0B 772KiB] Sc·[0.00 0.01]
+10:25:26.326960 table@compaction committed F-1 S-259KiB Ke·0 D·6378 T·120.2942ms
+10:25:26.326960 table@remove removed @5
+10:25:26.327958 table@remove removed @2
