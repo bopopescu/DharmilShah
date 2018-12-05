@@ -1,0 +1,31 @@
+INFO [12-05|15:41:09.099] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [12-05|15:41:09.104] Starting peer-to-peer node               instance=Geth/v1.8.18-stable-58632d44/windows-amd64/go1.11.2
+INFO [12-05|15:41:09.104] Allocated cache and file handles         database=E:\\dharmil\\Task\\Solidity_task\\privatenetworkcodes\\communication_within_same_pc\\testing\\node1\\geth\\chaindata cache=768 handles=1024
+INFO [12-05|15:41:09.441] Initialised chain configuration          config="{ChainID: 1111 Homestead: 1 DAO: <nil> DAOSupport: false EIP150: 2 EIP155: 3 EIP158: 3 Byzantium: 4 Constantinople: <nil> Engine: ethash}"
+INFO [12-05|15:41:09.441] Disk storage enabled for ethash caches   dir=E:\\dharmil\\Task\\Solidity_task\\privatenetworkcodes\\communication_within_same_pc\\testing\\node1\\geth\\ethash count=3
+INFO [12-05|15:41:09.441] Disk storage enabled for ethash DAGs     dir=C:\\Users\\JBSPL-0081\\AppData\\Ethash                                                                            count=2
+INFO [12-05|15:41:09.441] Initialising Ethereum protocol           versions="[63 62]" network=1111
+INFO [12-05|15:41:09.442] Loaded most recent local header          number=408 hash=568337…da36d2 td=212696461 age=2h45m53s
+INFO [12-05|15:41:09.442] Loaded most recent local full block      number=408 hash=568337…da36d2 td=212696461 age=2h45m53s
+INFO [12-05|15:41:09.442] Loaded most recent local fast block      number=408 hash=568337…da36d2 td=212696461 age=2h45m53s
+INFO [12-05|15:41:09.443] Loaded local transaction journal         transactions=1 dropped=1
+INFO [12-05|15:41:09.444] Regenerated local transaction journal    transactions=0 accounts=0
+WARN [12-05|15:41:09.444] Blockchain not empty, fast sync disabled 
+INFO [12-05|15:41:09.626] New local node record                    seq=25 id=b16dec07b19c1717 ip=127.0.0.1 udp=30303 tcp=30303
+INFO [12-05|15:41:09.626] Started P2P networking                   self=enode://0abbad3af66cadbac3447dfa0af820e45935449292005e01dfc11ee27f64375e702f767d79a6b5c23c3453581faccc289de1635aafc8ee72751847521367f44c@127.0.0.1:30303
+INFO [12-05|15:41:09.636] IPC endpoint opened                      url=\\\\.\\pipe\\geth.ipc
+INFO [12-05|15:41:09.777] Etherbase automatically configured       address=0xC7921DdB64Bd3831285042e579E6A8AD20878E42
+INFO [12-05|15:41:20.544] New local node record                    seq=26 id=b16dec07b19c1717 ip=127.0.0.1 udp=30303 tcp=30303
+INFO [12-05|15:41:22.331] New local node record                    seq=27 id=b16dec07b19c1717 ip=1.22.229.115 udp=30303 tcp=30303
+INFO [12-05|15:43:23.933] IPC endpoint closed                      endpoint=\\\\.\\pipe\\geth.ipc
+INFO [12-05|15:43:23.933] Writing cached state to disk             block=408 hash=568337…da36d2 root=893813…e481c5
+INFO [12-05|15:43:23.933] Persisted trie from memory database      nodes=0 size=0.00B time=0s gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [12-05|15:43:23.934] Writing cached state to disk             block=407 hash=77c5ed…e03254 root=ee66ab…5dad4c
+INFO [12-05|15:43:23.934] Persisted trie from memory database      nodes=0 size=0.00B time=0s gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [12-05|15:43:23.934] Writing cached state to disk             block=281 hash=52b31a…942210 root=880649…0863f4
+INFO [12-05|15:43:23.934] Persisted trie from memory database      nodes=0 size=0.00B time=0s gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [12-05|15:43:23.934] Blockchain manager stopped 
+INFO [12-05|15:43:23.934] Stopping Ethereum protocol 
+INFO [12-05|15:43:23.934] Ethereum protocol stopped 
+INFO [12-05|15:43:23.935] Transaction pool stopped 
+INFO [12-05|15:43:23.936] Database closed                          database=E:\\dharmil\\Task\\Solidity_task\\privatenetworkcodes\\communication_within_same_pc\\testing\\node1\\geth\\chaindata

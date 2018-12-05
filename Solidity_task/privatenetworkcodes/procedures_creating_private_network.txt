@@ -11,7 +11,7 @@ type 2 for exporting genesis file
 enter the name of your file
 type ctrl c
 then in your directory you can see that json file has been created 
-geth --datadir . init filename.json
+geth --datadir . init filename.json	
 
 geth --datadir . acccount new = used to create new account 
 and in passphrase enter the password
@@ -62,5 +62,9 @@ https://github.com/ethereum/go-ethereum/wiki/Javascript-Console
 geth --datadir="C:\user\jbspl-0081\block" -verbosity 6 --ipcdisable --port 30301 --rpcport 8101 console 2>> C:\user\jbspl-0081\block\1.log
 
 enode://1a361ca4d6626dc50ffc7d523637f011a1227805301ec4ba8d8b9952ace42655121b1cb8c67e4d74259fcddd2c3448aef18bb7a934d21b383c85a8c6d8caab12@192.168.88.232:30301
+
+
+>geth --datadir="C:\user\jbspl-0081\block" -verbosity 6 --ipcdisable --port 30301 --rpcport 8101 console 2>> C:\user\jbspl-0081\block\1.log
+
 
 
