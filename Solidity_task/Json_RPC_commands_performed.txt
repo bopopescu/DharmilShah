@@ -1,0 +1,69 @@
+{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":1111} = represent the version
+
+{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c6f"],"id":1111} = here params represent hex value of string and the result we get is in the form of sha3
+
+{"jsonrpc":"2.0","method":"net_version","params":[],"id":1111} = represent the network id
+
+{"jsonrpc":"2.0","method":"net_listening","params":[],"id":1111} = return whether the listeneing is true or false 
+
+{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":1111} = return number of peers connected to the client
+
+{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[],"id":1111} = return the current ethereum protocol version
+
+{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1111} =  An object with sync status data or FALSE, when not syncing
+
+{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":1111} = return the coinbase account address
+
+{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":1111} return true if client is currently mining or false
+
+{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":1111} = return the number of hashes per second
+
+{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":1111} = return the current gas price in wei
+
+{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1111} = return the number of address own by client
+
+{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1111} = return the number of most recent block
+
+{"jsonrpc":"2.0","method":"eth_getBalance","params":["0xc7921ddb64bd3831285042e579e6a8ad20878e42", "latest"],"id":1111} = return the balance of particular address
+
+{"jsonrpc":"2.0","method":"eth_getTransactionCount","params":["0xc7921ddb64bd3831285042e579e6a8ad20878e42","latest"],"id":1111} = Returns the number of transactions sent from an address.
+
+{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}
+
+{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHash","params":["0x19334078dfd6c8a097754d542e12fdd59292e7e960210fd08a837b441b89c695"],"id":1111} = eturns the number of transactions in a block from a block matching the given block hash
+
+{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNumber","params":["0xe8"],"id":1111} = Returns the number of transactions in a block matching the given block number.
+
+{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber","params":["0xe8"],"id":1111} = Returns the number of uncles in a block from a block matching the given block number.
+
+{"jsonrpc":"2.0","method":"eth_getCode","params":["0xc7921ddb64bd3831285042e579e6a8ad20878e42", "0x2"],"id":1111} = return the code at given address
+
+{"jsonrpc":"2.0","method":"eth_sign","params":["0xc7921ddb64bd3831285042e579e6a8ad20878e42", "0xdeadbeaf"],"id":1111} = returns the unique signature
+
+{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0x08347aa90aa8c9a240861ceae1833f1f397fac31d3af77a65c3694f89f7b5b3a", true],"id":1111} = returns number,hash,nonce,parenthash
+
+{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":["0x1b4", true],"id":1111} = return nince, number, timestamp
+
+{"jsonrpc":"2.0","method":"eth_getTransactionByHash","params":["0x788ae5c4b1d7764aa8547e81fdfc901b4b30f2bb5555794105a4156a27509671"],"id":1111} = return transactions object or null when nothing is transactions
+
+{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAndIndex","params":["0x788ae5c4b1d7764aa8547e81fdfc901b4b30f2bb5555794105a4156a27509671", "0x0"],"id":1111} = Returns information about a transaction by block hash and transaction index position.
+
+{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberAndIndex","params":["0x29c", "0x0"],"id":1111} = Returns information about a transaction by block number and transaction index position.
+
+{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","params":["0x788ae5c4b1d7764aa8547e81fdfc901b4b30f2bb5555794105a4156a27509671"],"id":1111} = Returns the receipt of a transaction by transaction hash.
+
+{"jsonrpc":"2.0","method":"eth_newBlockFilter","params":[],"id":1111} = Creates a filter in the node, to notify when a new block arrives.
+
+{"jsonrpc":"2.0","method":"eth_newPendingTransactionFilter","params":[],"id":1111} = Creates a filter in the node, to notify when new pending transactions arrive
+
+{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":["0x16"],"id":1111} = Polling method for a filter, which returns an array of logs which occurred since last poll.
+
+{"jsonrpc":"2.0","method":"eth_getFilterLogs","params":["0x16"],"id":1111} = Returns an array of all logs matching filter with given id.
+
+{"jsonrpc":"2.0","method":"eth_getWork","params":[],"id":1111} = returns current block header pow-hash, the seed hash used for the DAG,  the boundary condition 
+
+{"jsonrpc":"2.0", "method":"eth_submitHashrate", "params":["0x0000000000000000000000000000000000000000000000000000000000500000", "0x59daa26581d0acd1fce254fb7e85952f4c09d0915afd33d3886cd914bc7d283c"],"id":1111} = returns true if submitting went through succesfully and false otherwise.
+
+
+
+

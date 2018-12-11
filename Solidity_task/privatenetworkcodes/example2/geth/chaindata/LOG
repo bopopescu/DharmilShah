@@ -14,3 +14,37 @@
 10:31:19.258944 version@stat F·[1] S·50KiB[50KiB] Sc·[0.25]
 10:31:19.489543 db@janitor F·3 G·0
 10:31:19.489543 db@open done T·372.5288ms
+=============== Dec 11, 2018 (IST) ===============
+11:47:42.910460 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+11:47:42.950480 version@stat F·[1] S·50KiB[50KiB] Sc·[0.25]
+11:47:42.950480 db@open opening
+11:47:42.950480 journal@recovery F·1
+11:47:42.953520 journal@recovery recovering @3
+11:47:44.054205 memdb@flush created L0@5 N·32720 S·1MiB "Dat..ion,v621":"r\x00\x00..\xbe\xabV,v33336"
+11:47:44.065199 version@stat F·[2] S·1MiB[1MiB] Sc·[0.50]
+11:47:44.583164 db@janitor F·4 G·0
+11:47:44.583164 db@open done T·1.6326837s
+11:47:44.691889 table@compaction L0·2 -> L1·0 S·1MiB Q·33342
+11:47:44.918011 table@build created L1@8 N·22434 S·1MiB "\x02d\xfc..\x19Ba,v428":"\xfe\x88\xcf..H\xef\xcc,v361"
+11:47:44.918951 version@stat F·[0 1] S·1MiB[0B 1MiB] Sc·[0.00 0.01]
+11:47:45.420059 table@compaction committed F-1 S-445KiB Ke·0 D·10905 T·727.8742ms
+11:47:45.421064 table@remove removed @5
+11:47:45.423058 table@remove removed @2
+=============== Dec 11, 2018 (IST) ===============
+15:12:46.146929 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:12:46.167049 version@stat F·[0 1] S·1MiB[0B 1MiB] Sc·[0.00 0.01]
+15:12:46.167049 db@open opening
+15:12:46.167049 journal@recovery F·1
+15:12:46.170042 journal@recovery recovering @6
+15:12:46.231511 memdb@flush created L0@9 N·2 S·239B "Dat..ion,v33342":"Las..der,v33343"
+15:12:46.240498 version@stat F·[1 1] S·1MiB[239B 1MiB] Sc·[0.25 0.01]
+15:12:46.344545 db@janitor F·4 G·0
+15:12:46.344545 db@open done T·177.4962ms
+15:12:46.921743 table@compaction L0·1 -> L1·1 S·1MiB Q·33345
+15:12:46.992310 table@build created L1@12 N·22434 S·1MiB "\x02d\xfc..\x19Ba,v428":"\xfe\x88\xcf..H\xef\xcc,v361"
+15:12:46.992310 version@stat F·[0 1] S·1MiB[0B 1MiB] Sc·[0.00 0.01]
+15:12:47.097165 table@compaction committed F-1 S-239B Ke·0 D·2 T·175.4221ms
+15:12:47.098233 table@remove removed @9
+15:12:47.123475 table@remove removed @8
+15:17:35.391338 db@close closing
+15:17:35.932582 db@close done T·541.2444ms

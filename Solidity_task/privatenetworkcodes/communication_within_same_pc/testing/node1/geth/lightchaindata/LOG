@@ -24,3 +24,13 @@
 15:40:04.261477 version@stat F·[2] S·50KiB[50KiB] Sc·[0.50]
 15:40:04.369845 db@janitor F·4 G·0
 15:40:04.369845 db@open done T·176.9076ms
+=============== Dec 11, 2018 (IST) ===============
+15:18:09.201453 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:18:09.204541 version@stat F·[2] S·50KiB[50KiB] Sc·[0.50]
+15:18:09.204541 db@open opening
+15:18:09.204541 journal@recovery F·1
+15:18:09.206440 journal@recovery recovering @6
+15:18:09.263899 memdb@flush created L0@8 N·1 S·331B "eth..5\x8e{,v623":"eth..5\x8e{,v623"
+15:18:09.263899 version@stat F·[3] S·50KiB[50KiB] Sc·[0.75]
+15:18:09.365868 db@janitor F·5 G·0
+15:18:09.365868 db@open done T·161.3272ms

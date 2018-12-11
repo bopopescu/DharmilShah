@@ -8,7 +8,7 @@ In first terminal and attach geth attach (geth attach ipc:\\.\pipe\geth.ipc) to 
 6. admin.addPeer("enode of other node")
 7. admin.peers
 8. net.peerCount
-9. eth.blockNumber
+9. eth.blockNumber, eth.hashrate
 10. miner.start(1)
 11. eth.getBlock(15) // check hash value in both terminal . If same then there is no problem
 12. eth.getBlock(eth.blockNumber).miner
