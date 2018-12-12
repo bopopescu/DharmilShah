@@ -1,0 +1,44 @@
+			Deploying the Contract through geth
+
+open console type geth --datadir "E:\dharmil\Task\Solidity_task\privatenetworkcodes\communication_within_same_pc\testing\node1" --networkid 1111 --rpc --rpcport 8545 --rpccorsdomain "*" console 2>console.log
+create/open contract in Remix 
+change the environment to web 3 provider and specify the port. it should be same as rpc port 
+create account if not
+start mining miner.start(1)
+eth.blockNumber
+eth.hashrate
+deploy contract on remix 
+it will take time to mined the contract
+type eth.pendingTransactions and check whether your contract is mined . If it is mined it will return [] else details of pendingTransactions
+
+now to call function from geth follow this
+
+in geth console 
+
+var abi = [{"constant": true,"inputs": [{"name": "a","type": "int256"},{"name": "b","type": "int256"}],"name": "add","outputs": [{"name": "","type": "int256"}],"payable": false,"stateMutability": "view","type": "function"},{"constant": true,"inputs": [],"name": "getName","outputs": [{"name": "","type": "string"}],"payable": false,"stateMutability": "view","type": "function"},{"constant": false,"inputs": [{"name": "_name","type": "string"}],"name": "setName","outputs": [],"payable": false,"stateMutability": "nonpayable","type": "function"},{"constant": false,"inputs": [{"name": "a","type": "int256"},{"name": "b","type": "int256"},{"name": "_name","type": "string"}],"name": "addAndRename","outputs": [{"name": "","type": "int256"}],"payable": false,"stateMutability": "nonpayable","type": "function"}]
+it will returned undefined which is proper
+
+then type abi it will show the above abi in proper format
+
+var address = "copy the contract address"
+address will display our contract address
+
+then define one variable and perform this command
+var adder1 = eth.contract(abi).at(address)
+it will returned undefined which is fine
+
+type adder1
+which will show our's contract abi, contract address and function of our contract 
+
+eth.defaultAccount=eth.accounts[0]
+personal.unlockAccount(eth.accounts[0])
+
+now access the function with defined variable which is adder1 in this case
+adder1.getName()
+adder1.setName("dharmil contract")
+adder1.getName()
+
+and you can also check on the remix it will return the same name
+
+
+

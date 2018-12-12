@@ -119,3 +119,303 @@ web3.fromWei(eth.getBalance("0x684c01e863148353d58c54321bebf7cde3757777"), "ethe
 eth.getTransaction("0x684c01e863148353d58c54321bebf7cde3757777")
 miner.stop()
 admin.nodeInfo.enode
+eth.accounts
+eth.getBalance(eth.coinbase)
+miner.start(1)
+eth.hashrate
+miner.stop
+miner.stop()
+eth.hashrate
+minder.start(1)
+miner.start(1)
+eth.pendingTransaction
+eth.pendingTransactions
+eth.accounts[0]
+eth.hashrate
+eth.pendingTransactions
+miner.stop()
+eth.accounts
+miner.start(1)
+eth.pendingTransactions
+miner.stop()
+eth.accounts
+miner.start(1)
+var abi =
+var abi = [
+{
+"constant": true,
+"inputs": [
+{
+"name": "a",
+"type": "int256"
+},
+{
+"name": "b",
+"type": "int256"
+}
+],
+"name": "add",
+"outputs": [
+{
+"name": "",
+"type": "int256"
+}
+],
+"payable": false,
+"stateMutability": "view",
+"type": "function"
+},
+{
+"constant": true,
+"inputs": [],
+"name": "getName",
+"outputs": [
+{
+"name": "",
+"type": "string"
+}
+],
+"payable": false,
+"stateMutability": "view",
+"type": "function"
+},
+{
+"constant": false,
+"inputs": [
+{
+"name": "_name",
+"type": "string"
+}
+],
+"name": "setName",
+"outputs": [],
+"payable": false,
+"stateMutability": "nonpayable",
+"type": "function"
+},
+{
+"constant": false,
+"inputs": [
+{
+"name": "a",
+"type": "int256"
+},
+{
+"name": "b",
+"type": "int256"
+},
+{
+"name": "_name",
+"type": "string"
+}
+],
+"name": "addAndRename",
+"outputs": [
+{
+"name": "",
+"type": "int256"
+}
+],
+"payable": false,
+"stateMutability": "nonpayable",
+"type": "function"
+}
+abi
+var abi =[
+{
+"constant": true,
+"inputs": [
+{
+"name": "a",
+"type": "int256"
+},
+{
+"name": "b",
+"type": "int256"
+}
+],
+"name": "add",
+"outputs": [
+{
+"name": "",
+"type": "int256"
+}
+],
+"payable": false,
+"stateMutability": "view",
+"type": "function"
+},
+{
+"constant": true,
+"inputs": [],
+"name": "getName",
+"outputs": [
+{
+"name": "",
+"type": "string"
+}
+],
+"payable": false,
+"stateMutability": "view",
+"type": "function"
+},
+{
+"constant": false,
+"inputs": [
+{
+"name": "_name",
+"type": "string"
+}
+],
+"name": "setName",
+"outputs": [],
+"payable": false,
+"stateMutability": "nonpayable",
+"type": "function"
+},
+{
+"constant": false,
+"inputs": [
+{
+"name": "a",
+"type": "int256"
+},
+{
+"name": "b",
+"type": "int256"
+},
+{
+"name": "_name",
+"type": "string"
+}
+],
+"name": "addAndRename",
+"outputs": [
+{
+"name": "",
+"type": "int256"
+}
+],
+"payable": false,
+"stateMutability": "nonpayable",
+"type": "function"
+}
+]
+var abi = [{"constant": true,"inputs": [{"name": "a","type": "int256"},{"name": "b","type": "int256"}],"name": "add","outputs": [{"name": "","type": "int256"}],"payable": false,"stateMutability": "view","type": "function"},{"constant": true,"inputs": [],"name": "getName","outputs": [{"name": "","type": "string"}],"payable": false,"stateMutability": "view","type": "function"},{"constant": false,"inputs": [{"name": "_name","type": "string"}],"name": "setName","outputs": [],"payable": false,"stateMutability": "nonpayable","type": "function"},{"constant": false,"inputs": [{"name": "a","type": "int256"},{"name": "b","type": "int256"},{"name": "_name","type": "string"}],"name": "addAndRename","outputs": [{"name": "","type": "int256"}],"payable": false,"stateMutability": "nonpayable","type": "function"}]
+abi
+var address = "0x8edb124d6a6e55679755e4547052fd4f7d15ce91"
+address
+var adder1 = eth.contract(abi).at(address)
+adder1
+adder1.getName()
+eth.defaultAccount=eth.accounts[0]
+adder1.setName("Dharmil Contrac")
+eth.pendingTransactions
+miner.start(1)
+eth.pendingTransactions
+adder1.getName()
+miner.stop()
+eth.accounts
+eth.getBalance(eth.coinbase)
+web3.fromWei(eth.getBalance(eth.coinbase),"ether")
+miner.start(1)
+eth.pendingTransactions
+eth.hashrate
+eth.pendingTransactions
+eth.hashrate
+miner.start(1)
+eth.hashrate
+miner.start()
+eth.\blockNumber
+eth.blockNumber
+eth.hashrate
+eth.blockNumber
+eth.hashrate
+web3.fromWei(eth.getBalance(eth.coinbase),"ether")
+eth.hashrate
+web3.fromWei(eth.getBalance(eth.coinbase),"ether")
+eth.hashrate
+eth.blockNumber
+eth.hashraette
+eth.hashrate
+miner.stop()
+eth.hashrate
+miner.stop()
+miner.start(1)
+eth.hashrate
+miner.start(1)
+eth.hashrate
+miner.start(1)
+eth.hashrate
+eth.pendingTransactions
+eth.hashrate
+eth.accounts
+eth.hashrate
+miner.start(1)
+miner.hashrate
+eth.hashrate
+miner.start(1)
+miner.hashrate
+eth.hashrate
+eth.blockNumber
+eth.hashrate
+eth.blockNumber
+eth.hashrate
+eth.pendingTransactions
+eth.hashrate
+eth.pendingTransactions
+eth.hashrate
+eth.pendingTransactions
+eth.hashrate
+miner.stop()
+eth.hashrate
+eth.pendingTransactions
+eth.hashrate
+miner.hashrate
+var a = miner.hashrate
+a
+eth.hashrate
+miner.stop()
+web3.fromWei(eth.getBalance(eth.coinbase),"ether")
+eth.hashrate
+eth.blockNumber
+eth.synicng
+eth.syncing
+eth.hashrate
+eth.pendingTransactions
+eth.hsahrate
+eth.hashrate
+eth.pendingTransactions
+eth.hashrate
+miner.start(1)
+eth.accounts
+eth.hashrate
+eth.blockNumber
+eth.hashrate
+eth.blockNumber
+eth.hashrate
+eth.blockNumber
+eth.hashrate
+eth.blockNumber
+eth.hashrate
+eth.blockNumber
+eth.hashrate
+eth.blockNumber
+eth.hashrate
+eth.blockNumber
+eth.hashrate
+eth.blockNumber
+eth.hashrate
+eth.blockNumber
+eth.hashrate
+eth.blockNumber
+eth.hashrate
+eth.blockNumber
+eth.hashrate
+miner.start()
+eth.pendingTransactions
+eth.hashrate
+eth.blockNumber
+eth.hashrate
+addr1
+miner.stop()
