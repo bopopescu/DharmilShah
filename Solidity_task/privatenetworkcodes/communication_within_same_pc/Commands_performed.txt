@@ -19,7 +19,7 @@ In first terminal and attach geth attach (geth attach ipc:\\.\pipe\geth.ipc) to 
 17. eth.sendTransaction({from:eth.coinbase, to:"0x684c01e863148353d58c54321bebf7cde3757777", value: web3.toWei(100, "ether"), gas: 40000});
 18. web3.fromWei(eth.getBalance("0x684c01e863148353d58c54321bebf7cde3757777"), "ether")
 19. miner.stop()
-
+eth.getBlock(15).hash
 
 Open PowerShell which represent 2nd node 
 

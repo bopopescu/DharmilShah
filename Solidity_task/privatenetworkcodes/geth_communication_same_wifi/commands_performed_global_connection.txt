@@ -1,0 +1,81 @@
+-> turn of firewall on your anti-virus
+
+-> turn on all feature of window firewall
+
+-> add rule for your port 30303 and 30304 both in tcp and udp
+
+-> network id must be same in all network. 
+-> here we share common genesis.json file.
+
+\\genesis.json file
+{
+"config": {
+"chainId": 4321,
+"homesteadBlock": 0,
+"eip155Block": 0,
+"eip158Block": 0
+},
+"alloc": {},
+"difficulty" : "0x20000",
+"gasLimit"   : "0x8880000"
+}
+
+
+-> know your ip before start commands.
+
+-> node 1 :-
+
+	1) geth --datadir blkchain1 init genesis.json
+
+	2) geth --datadir "C:\Users\jbspl-0086\blockchain\final" --nodiscover --networkid 1234 --rpcaddr 0.0.0.0 --rpcport 8550 console
+
+	it will starts javascript terminal...
+
+
+	admin.nodeInfo
+	
+	by default the listener port is 30303
+	
+	admin.startRPC("0.0.0.0", 8551, "*", "web3,db,net,eth")
+0
+	personal.newAccount()
+	
+	personal.listAccounts
+	
+	personal.unlockAccount(eth.coinbase)
+	
+	geth attach on new terminal for transferring the data
+
+
+-> Node 2 on different Machine :-
+
+	geth --datadir blkchain1 init genesis.json
+
+	geth --datadir "E:\latest_global" --nodiscover --networkid 1234 --port 30304 --rpcaddr 0.0.0.0 --rpcport 8551 console
+	
+	admin.startRPC("0.0.0.0", 8552,"*","web3,db,net,eth")
+
+	admin.nodeInfo
+
+	personal.newAccount()
+	
+	admin.addPeer("enode://8eab2ef67b6726a2fe6461d82b1e05c501b3fc36c55af0b1e4468e0a37ece83bdd1f0a472b251f3fe5d398a551d415402dd7db310f3dba16b4a5d1be2e26ea40@192.168.0.124:30303?discport=0")
+
+	admin.peers
+
+	miner.start() in node 1 as a result of that you will see block synchronization in your console
+
+	then open new terminal  and type geth attach ipc:\\.\pipe\geth.ipc
+
+	eth.accounts
+ 
+	eth.getBlock(10)
+
+	eth.coinbase
+
+	transfer amount from node 1 to node 2 . command :- eth.sendTransaction({from:eth.coinbase, to:"0x684c01e863148353d58c54321bebf7cde3757777", value: web3.toWei(100, "ether"), gas: 40000}); 
+
+	before transferring amount , you have to unlock your account. command :-  personal.unlockAccount(eth.coinbase)
+
+	then check your balance in your account. command :- eth.getBalance(eth.coinbase), web3.fromWei(eth.getBalance(eth.coinbase),"ether")
+

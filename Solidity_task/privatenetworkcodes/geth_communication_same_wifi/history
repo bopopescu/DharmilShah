@@ -1,0 +1,13 @@
+admin.nodeInfo
+admin.startRPC("0.0.0.0", 8552,"*","web3,db,net,eth")
+admin.nodeInfo
+admin.peers
+admin.addPeer("enode://8eab2ef67b6726a2fe6461d82b1e05c501b3fc36c55af0b1e4468e0a37ece83bdd1f0a472b251f3fe5d398a551d415402dd7db310f3dba16b4a5d1be2e26ea40@123.201.19.121:30303?discport=0")
+admin.peers
+net.peerCount
+admin.addPeer("enode://8eab2ef67b6726a2fe6461d82b1e05c501b3fc36c55af0b1e4468e0a37ece83bdd1f0a472b251f3fe5d398a551d415402dd7db310f3dba16b4a5d1be2e26ea40@192.168.0.124:30303?discport=0")
+admin.peers
+eth.blockNumber
+admin.peers
+net
+net.peerCount

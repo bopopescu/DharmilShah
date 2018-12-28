@@ -42,6 +42,8 @@
 
 {"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0x08347aa90aa8c9a240861ceae1833f1f397fac31d3af77a65c3694f89f7b5b3a", true],"id":1111} = returns number,hash,nonce,parenthash
 
+eth.getBlock(15).hash
+
 {"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":["0x1b4", true],"id":1111} = return nince, number, timestamp
 
 {"jsonrpc":"2.0","method":"eth_getTransactionByHash","params":["0x788ae5c4b1d7764aa8547e81fdfc901b4b30f2bb5555794105a4156a27509671"],"id":1111} = return transactions object or null when nothing is transactions
@@ -64,6 +66,13 @@
 
 {"jsonrpc":"2.0", "method":"eth_submitHashrate", "params":["0x0000000000000000000000000000000000000000000000000000000000500000", "0x59daa26581d0acd1fce254fb7e85952f4c09d0915afd33d3886cd914bc7d283c"],"id":1111} = returns true if submitting went through succesfully and false otherwise.
 
-
+{"jsonrpc":"2.0","method":"eth_sendTransaction","params": [{
+  "from": "0xc7921ddb64bd3831285042e579e6a8ad20878e42",
+  "to": "0xa781c87510d87ef97354db48bfae87a78d7ffb5a",
+  "gas": "0x76c0",
+  "gasPrice": "0x9184e72a000",
+  "value": "0x9184e72a",
+  "data": "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675"
+}],"id":1111}
 
 
