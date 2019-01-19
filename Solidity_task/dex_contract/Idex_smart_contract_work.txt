@@ -1,0 +1,202 @@
+trade value : [30,1000000000000000000,190000,45,30,113,1000000000000000,7125632448188016]
+tradeAddresses : ["0x93f136820df4c5b7c98244a0b31a865de3570642","0x0000000000000000000000000000000000000000","0x9d3652673614d32e5ee3175d90a592e59202c076",
+				  "0x193072c4c771e905b8b036461fac12c037a95078"]
+				  
+implemented through Ganache
+				  
+procedure :
+	
+	deploy erc20 contract
+	deploy dex contract
+	use approve function for dex contract address with some value so it gets deposit using deposit token function
+	now deposit that amount of token in deposit function which takes token address as erc20 contract deploy address and amount 
+	in account 0 is the admin and owner account
+	   account 1 is the maker account
+	   account 2 is the taker account
+	   
+	deploy hash_generation_dex_contract
+		this contract will generate the signature and used that signature in app.js file(E:\course-eth\course-eth)
+		this contract will generate two hash i.e order hash and trade hash. so for maker v r s use order hash and in app.js change web3.account to web3.eth.accounts[1]
+		this will generate V R S value for the maker account  
+		same procedure for taker account to generate V R S( but used 2nd hash from hash_generation_dex_contract which represent
+			trade hash and for web3.eth.accounts use 2 instead of 1)
+	
+	deposit 1 ether using maker account 
+	
+	for trade function
+		supply trade value, tradeAddresses , v value of both taker and maker and RS value of Taker and Maker account 
+			tradevalue[0] and tradevalue[4] should be same.
+			
+	for withdraw function used maker account to withdraw and check that balance in erc20 contract
+	
+	for admin withdraw function find out the V R S value for maker account using withdrawhash function in hash_generation_dex_contract. this will generate hash and use that hash to 
+	generate V R S value in app.js using web.eth.accounts[1]
+	
+	to run app.js use in cmd node app.js
+
+	in app.js check the localhost port whether it is the same port as of ganache or not. if not that it will throw an error. 
+	
+trade values : 
+
+	token depost from erc20 is = 5000
+
+[0] amount buy entire buy amount order: 
+[1] amount sell entire sell amount order : 
+[2] expires block where order expires : 190000 (always take this )
+[3] nonce of the maker order : 
+[4] amount of the being bought for :  
+[5] tradenonce nonce of the taker : 
+[6] feeMake fee as proportion of 1 ether, in units of tokenbuy : 1000000000000000 -> divide by 1000000000000000000 == 0.1% fee							
+[7] feeTake fee as a proportion of 1 ether, in units of tokenSell : 7125632448188016 -> divide by 1000000000000000000 approximately = 0.7125632448188016#% fee
+
+
+[30,1000000000000000000,190000,45,30,113,1000000000000000,7125632448188016]
+     
+
+
+
+trade address :
+
+[0] tokenBuy address of the token bought by the maker : 0x93f136820df4c5b7c98244a0b31a865de3570642 (10000)
+[1] tokenSell address of the token sold by the taker : 0x0000000000000000000000000000000000000000 (this is the null address, which denotes Ether)(0x77a6d1bb3bb82d7ff15cd84a58313da09cc764d7)
+[2] maker account address of the maker : 0x9d3652673614d32e5ee3175d90a592e59202c076 (0)
+[3] taker account address of the taker : 0x193072c4c771e905b8b036461fac12c037a95078 (0)
+
+
+["0x93f136820df4c5b7c98244a0b31a865de3570642","0x0000000000000000000000000000000000000000","0x9d3652673614d32e5ee3175d90a592e59202c076","0x193072c4c771e905b8b036461fac12c037a95078"]
+
+maker addess : 0x684cD2A0a3E621f4ab955f27C993E9c5df7Bf6b3 
+			   
+		hash message : 0x1c8aff950685c2ed4bc3174f3472287b56d9517b9c948127319a09a7a36deac8
+		signature : 0x 7884b4a65e1d6556187fe617af3719ecf299036526b708fd4a0e765143f49acd08089d33747fa257f6ccb2642d042fc358f99e516b0d6ca46d577867f60cce7d 1b
+	
+	V:	00 + 27 = 27
+	R:	7884b4a65e1d6556187fe617af3719ecf299036526b708fd4a0e765143f49acd
+	S:	08089d33747fa257f6ccb2642d042fc358f99e516b0d6ca46d577867f60cce7d
+
+taker addess : 0x130b9EB25a9709da1EbC3F0e11aA76d77C789025
+			   
+		hash message : 0x1c8aff950685c2ed4bc3174f3472287b56d9517b9c948127319a09a7a36deac8
+		signature : 0x 6e96183131d649595bac17942b03e4ccaed6b3ab5326459cd5e8863570c846855833a3d21746edb88b0cab55a98cbe409f96ae885e0d9f4b5617112eedb25d5f 1b
+	
+	V:	00+27 = 27
+	R:	6e96183131d649595bac17942b03e4ccaed6b3ab5326459cd5e8863570c84685
+	S:	5833a3d21746edb88b0cab55a98cbe409f96ae885e0d9f4b5617112eedb25d5f
+
+V = [27,27]	
+	
+[0] maker r from signature : Hex --> Bytes32 0x7884b4a65e1d6556187fe617af3719ecf299036526b708fd4a0e765143f49acd
+[1] maker s from signature : Hex --> Bytes32 0x08089d33747fa257f6ccb2642d042fc358f99e516b0d6ca46d577867f60cce7d
+[2] taker r from signature : Hex --> Bytes32 0x6e96183131d649595bac17942b03e4ccaed6b3ab5326459cd5e8863570c84685
+[3] taker s from signature : Hex --> Bytes32 0x5833a3d21746edb88b0cab55a98cbe409f96ae885e0d9f4b5617112eedb25d5f
+
+RS = ["0x7884b4a65e1d6556187fe617af3719ecf299036526b708fd4a0e765143f49acd","0x08089d33747fa257f6ccb2642d042fc358f99e516b0d6ca46d577867f60cce7d",
+"0x6e96183131d649595bac17942b03e4ccaed6b3ab5326459cd5e8863570c84685","0x5833a3d21746edb88b0cab55a98cbe409f96ae885e0d9f4b5617112eedb25d5f"]
+
+{"jsonrpc":"2.0","method":"eth_sign","params":["0x193072c4c771e905b8b036461fac12c037a95078", "0xhelloworld"],"id":5777}
+	
+{"jsonrpc":"2.0","method":"eth_getTransactionByHash","params":["0xae8b09240cfcb7691232b0788de1cc0c45665d07d95514a9a1872894708c4b6876971f93ded51506b9b6aecc930bb41e9ce16348451d5cb0149a471fa08f856901"],"id":5777}
+
+{"jsonrpc":"2.0","method":"eth_getTransactionByHash","params":["0x50a0c7cfcb373cf00a2f198427acf11c58764366"],"id":5777}	
+	
+exchange hash : 0x83f48e06bd9913ed138aff0593aa66e80fcf37070652d6da11b208cb9dc01266 = Deploy
+erc hash : 0x03c4d780551a27217ee6c0855b7a64b0dbb60bf74a8a94e9a71d04915bd87def = Deploy
+
+approve hash : 0xe661a694f1fc454a2b6ac09eb48728c467c4bf389d4a68f44adb3dd2458cb7a4
+depostit token hash : 0x9bbcb6195c41d903ae4d921a8f3568a8b3afc48941f3d40f5634cf2e47bf2914
+
+set admin hash : 0xedf84afc465b703506d5b8cc9d6f4cfcc45edd903975688f6f4e1e87fa3e8573
+
+
+
+{
+		"from": "0xfe3615de0b0c21329808ec68ac92d20c52039858",
+		"topic": "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925",
+		"event": "Approval",
+		"args": {
+			"0": "0xc8F205acb6735E88E050B1E06C3D0D921e52471b",
+			"1": "0x3E8AfDE1c0D6DB3F2b88f7dc8C0f2510c43e4978",
+			"2": "1000000000000000000000",
+			"_owner": "0xc8F205acb6735E88E050B1E06C3D0D921e52471b",
+			"_spender": "0x3E8AfDE1c0D6DB3F2b88f7dc8C0f2510c43e4978",
+			"_value": "1000000000000000000000",
+			"length": 3
+		}
+	}
+	
+trade :
+
+{
+	"uint256[8] tradeValues": [
+		"30",
+		"1000000000000000000",
+		"190000",
+		"45",
+		"30",
+		"113",
+		"1000000000000000",
+		"7125632448188016"
+	],
+	"address[4] tradeAddresses": [
+		"0x1DEb668285F7E3130AF3813B5E80276e953DDa23",
+		"0x0000000000000000000000000000000000000000",
+		"0x9d3652673614D32E5Ee3175D90A592E59202C076",
+		"0x193072C4C771e905b8B036461FaC12c037a95078"
+	],
+	"uint8[2] v": [
+		27,
+		28
+	],
+	"bytes32[4] rs": [
+		"0x9a440616e1861b9051033a4fb24ceba802567958208df51af2e8bb87153a32b3",
+		"0x3bc67612d9ed6fa7e870331d5beb097f5b19712c2bab6148ce273c5031b1817e",
+		"0xbe4c45df2249589cae8ef4fbe0b61d85aaf7b5f2fbd587fa4644f3327ab7c04c",
+		"0x1e4348f443c589fcc1502569c9ed51b08ccc174b3fd10fcb09bc702a328b0ca1"
+	]
+} 	
+
+var sig = web3.eth.sign(web3.eth.accounts[0],web3.sha3("hello"),function(err,result){
+	if(err){
+		console.log(err)
+	}
+	if(result)
+	{
+		console.log(result)
+	}
+})
+
+	
+if(invalidorder[0x9d3652673614d32e5ee3175d90a592e59202c076](balance of this address) > [10]) revert()
+orderhash = (contract address, 0xc8f205acb6735e88e050b1e06c3d0d921e52471b, 7000, 0x0000000000000000000000000000000000000000, 6000, 8500, 10, 0x9d3652673614d32e5ee3175d90a592e59202c076
+ecrecover = 
+tradehash = (orderhash, 5500, 0x193072c4c771e905b8b036461fac12c037a95078, 20)
+ecrecover = 
+if (traded(mapping (bytes32 => bool) public traded;)[tradehash]) revert()
+traded[tradehash] = true;
+if(0.1 > 100 finney) tradevalue[6] = 100 finney;
+if(0.7125632448188016 > 100 finney) tradevalue[7] = 100 finney
+if(safeadd(orderfills(mapping (bytes32 => uint256) public orderFills)[orderhash], 5500) > 7000 revert()
+if(token[0xc8f205acb6735e88e050b1e06c3d0d921e52471b = token of this address(5000)][0x193072c4c771e905b8b036461fac12c037a95078(0) = tokens of this address]) < 2500 revert()
+	mapping (address => mapping (address => uint256)) public tokens; //mapping of token addresses to mapping of account balances
+	
+
+
+admin withdraw function
+
+{
+		"from": "0xd95faef9eed84fe32284f404d6ca8269fb5a21a4",
+		"topic": "0xf341246adaac6f497bc2a656f546ab9e182111d630394f0c57c710a59a2cb567",
+		"event": "Withdraw",
+		"args": {
+			"0": "0x93F136820dF4C5B7C98244a0b31a865de3570642",
+			"1": "0x9d3652673614D32E5Ee3175D90A592E59202C076",
+			"2": "2",
+			"3": "21",
+			"token": "0x93F136820dF4C5B7C98244a0b31a865de3570642",
+			"user": "0x9d3652673614D32E5Ee3175D90A592E59202C076",
+			"amount": "2",
+			"balance": "21",
+			"length": 4
+		}
+	}
+]

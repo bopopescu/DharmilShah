@@ -1,0 +1,117 @@
+
+* Alice deposits ether to IDEX using deposit method
+* Bob wants to deposit some ERC20 tokens:
+* Bob gives the allowance to IDEX by calling ERC20.approve
+* Bob calls depositToken method on IDEX
+* Alice as a market maker signs a create order message to buy ERC20 tokens with ether and sends it to IDEX
+* IDEX backend validates the message and displays the order on the website
+* Bob as a market taker wants to fill Alice's order, so he signs the trade message and sends it to IDEX
+* IDEX backend matches the trade and calls trade method which swaps the balance of ether and ERC20 for Alice and Bob and, at the same     time, takes the fees from both
+* Alice wants to withdraw her new tokens so she signs a withdraw request and sends it to IDEX
+* IDEX processes the requests and calls adminWithdraw on Alice's behalf and takes the withdrawal fee.
+
+Maker and taker deposit their tokens into the IDEX smart contract.
+IDEX database is updated to include the customer addresses and associated token balances.
+Maker creates and submits a new order, signing a transaction that includes the trade data and authorizes the smart contract to execute the future trade.
+IDEX reviews the order and confirms that the maker account has sufficient funds and that all info in the signed transaction matches what was submitted to IDEX.
+If all checks in part 4 pass, the order is added to the orderbook.
+Taker sees an order on the order book and submits a trade to fill it, signing a transaction with this same trade data and authorizing the smart contract to execute the trade.
+IDEX reviews the order and confirms that the taker account has sufficient funds and that all info in the signed transaction matches what was submitted to IDEX.
+If all checks in part seven pass then the trade is marked as matched and the orderbook is updated to indicate a filled order.
+The IDEX database is updated to reflect the new balances of both traders after this recent trade. Traders can continue to make new trades based on these updated balances. Simultaneously the market maker’s and taker’s signed orders are added to the queue to be broadcast to the Ethereum network for processing.
+After the trade has been reached in the queue, the maker’s transaction is dispatched to the ethereum blockchain.
+The maker’s transaction is mined and the order is added to the internal order book in the smart contract.
+After the maker’s order has been mined, the taker’s transaction is dispatched to the ethereum blockchain.
+The taker’s trade is mined and the balances in the ethereum contract are updated to reflect the trade.
+
+TRADE:
+
+## [0] - amountBuy
+This is the amount of the token being bought by the maker if the whole order were to be filled, signed by the maker
+Example: Hex --> Int
+(31324047749915079722221) of tokenBuy)
+
+## [1] - amountSell
+This is the amount of the token being sold by the maker if the whole order were to be filled, signed by the maker
+Example: Hex --> Int
+(563832859498471434 of tokenSell)
+
+## [2] - expires
+This is a currently unused field, always set to 190000, but inactive. In the future it will represent a block number after which the order can no longer be filled, signed by the maker
+
+## [3] - nonce
+This is a one time integer between 1 and 2^256 used to make the order unique while preventing replay attacks, signed by the maker
+Example: Hex --> Int
+45
+
+## [4] - amount
+This it the amount (<= amountBuy) that the order is being filled for, signed by the taker
+Exmaple: Hex --> Int
+31324047749915079722221
+
+## [5] - tradeNonce
+This is the nonce that the taker signs
+Eample: Hex --> Int
+1135
+
+## [6] - feeMake
+This is the fee taken from the maker as a proportion of 1 ether, in units of tokenBuy
+Example: Hex --> Int
+1000000000000000 -> divide by 1000000000000000000 == 0.1% fee
+
+## [7] - feeTake
+This is the fee taken from the taker as a proportion of 1 ether, in units of tokenSell
+Example: Hex --> Int
+7125632448188016 -> divide by 1000000000000000000 approximately = 0.7125632448188016#% fee
+
+## [8] - tokenBuy
+Address of the token being bought by the maker, sold by the taker.
+Example: Hex --> Address
+0xa849eaae994fb86afa73382e9bd88c2b6b18dc71 (MVL)
+
+## [9] - tokenSell
+Address of the token being sold by the maker, bought by the taker.
+Example: Hex --> Address
+0x0000000000000000000000000000000000000000 (this is the null address, which denotes Ether)
+
+## [10] - maker
+Address of the maker
+Example: Hex --> Address
+0xf0ec187925afd056711a95cccecf4af984fe5a4c
+
+
+## [11] - taker
+Address of the taker
+Example: Hex --> Address
+0x951c7c87537d236bb54c178b091073a36e0a3b8b
+
+## [12] - maker v
+The signature "v" value of the maker signature.
+Example: Hex --> Int (27 or 28)
+28
+
+## [13] taker v
+The signature "v" value of the taker signature.
+Exmaple: HEx --> Int (27 or 28)
+28
+
+## [14] maker r
+The signature "r" value of the maker signature.
+Exmaple: Hex --> Bytes32
+0x3d3b7b2f84f600ff8e3cd079e73a438211a91d003275c44a3fa7343f9c12cc49
+
+## [15] maker s
+The signature "s" value of the maker signature.
+Exmaple: Hex --> Bytes32
+0x2ea0431b220783c91f1637b7de31eb655d932de72a176805d4ed58f2c4c70fd9
+
+## [16] taker r
+The signature "r" value of the taker signature.
+Example: Hex --> Bytes32
+0xa911812b43c220f2bd8100718ade043b70e5257f8bf47db99fd2625fbc0c79ba
+
+## [17] taker s
+The signature "s" value of the taker signature.
+Exmaple: Hex --> Bytes32
+0x6748478f13d9fc78163adfab0d138dba7e3e42dbf381a2b09cd79ba4fd161b1d
+
